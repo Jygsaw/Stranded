@@ -1,10 +1,16 @@
-<html>
+<html ng-app="strandedApp" ng-strict-di>
   <head>
     <!-- Stylesheets: begin -->
     <link href="main.css" rel="stylesheet">
     <!-- Stylesheets: end -->
+
+    <!-- Scripts: begin -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js"></script>
+    <script src="main.js"></script>
+    <!-- Scripts: end -->
   </head>
   <body>
-    <div>INDEX PAGE</div>
+    <div ui-view></div>
   </body>
 </html>
