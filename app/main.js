@@ -8,6 +8,7 @@
     'strandedApp.login',
     'strandedApp.nav',
     'strandedApp.dash',
+    'strandedApp.account',
   ]);
 
   // configure default route
