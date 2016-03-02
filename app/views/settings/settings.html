@@ -1,0 +1,62 @@
+<div class="container">
+  <form ng-submit="submit()">
+    <fieldset class="row">
+      <label class="col-xs-3">Sound</label>
+      <div class="col-xs-9">
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" ng-model="sound" ng-value="true">
+            On
+          </label>
+          <label class="radio-inline">
+            <input type="radio" ng-model="sound" ng-value="false">
+            Off
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="range" min="0" max="10" ng-model="master_volume">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="row">
+      <label class="col-xs-3">Music</label>
+      <div class="col-xs-9">
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" ng-model="music" ng-value="true">
+            On
+          </label>
+          <label class="radio-inline">
+            <input type="radio" ng-model="music" ng-value="false">
+            Off
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="range" min="0" max="10" ng-model="music_volume">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset class="row">
+      <label class="col-xs-3">SFX</label>
+      <div class="col-xs-9">
+        <div class="form-group">
+          <label class="radio-inline">
+            <input type="radio" ng-model="sfx" ng-value="true">
+            On
+          </label>
+          <label class="radio-inline">
+            <input type="radio" ng-model="sfx" ng-value="false">
+            Off
+          </label>
+        </div>
+        <div class="form-group">
+          <input type="range" min="0" max="10" ng-model="sfx_volume">
+        </div>
+      </div>
+    </fieldset>
+    <div class="text-center">
+      <button class="btn btn-default" type="submit">Submit</button>
+      <button class="btn btn-default" type="reset">Reset</button>
+    </div>
+  </form>
+</div>
