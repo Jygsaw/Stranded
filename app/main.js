@@ -11,7 +11,7 @@
   app.config([
     '$urlRouterProvider',
     function ($urlRouterProvider) {
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider.otherwise('/splash');
     }
   ]);
 }());
