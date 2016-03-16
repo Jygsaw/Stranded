@@ -41,7 +41,7 @@
           console.log("login success");
 
           // send user to next page
-          $state.go('splash');
+          $state.go('nav.dash');
         }, function error(response) {
           console.log("login error");
         });
