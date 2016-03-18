@@ -6,6 +6,7 @@
     'ui.router',
     'strandedApp.splash',
     'strandedApp.login',
+    'strandedApp.nav',
   ]);
 
   // configure default route
