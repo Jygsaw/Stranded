@@ -4,6 +4,13 @@
   vertical-align: middle;
   float: none;
 }
+
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
 /***** Utility Styles: end *****/
 
 .index-child-view {
