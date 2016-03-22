@@ -9,3 +9,11 @@
 .index-child-view {
   height: 100%;
 }
+
+.nav-child-view {
+  position: absolute;
+  top: 72px; /* based on top nav size */
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
