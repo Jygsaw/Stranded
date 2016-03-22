@@ -5,3 +5,7 @@
   float: none;
 }
 /***** Utility Styles: end *****/
+
+.index-child-view {
+  height: 100%;
+}
