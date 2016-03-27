@@ -22,7 +22,69 @@
       this.getInventory = function () {
         if (inventory === null) {
           // fetch data from db
-          inventory = [];
+          // TODO replace dummy data with db call
+          inventory = [
+            {
+              id: 11,
+              name: 'Armor Mk.1',
+              type: 'armor',
+            },
+            {
+              id: 12,
+              name: 'Armor Mk.2',
+              type: 'armor',
+            },
+            {
+              id: 21,
+              name: 'Engine Mk.1',
+              type: 'engine',
+            },
+            {
+              id: 22,
+              name: 'Engine Mk.2',
+              type: 'engine',
+            },
+            {
+              id: 31,
+              name: 'Frame Mk.1',
+              type: 'frame',
+            },
+            {
+              id: 32,
+              name: 'Frame Mk.2',
+              type: 'frame',
+            },
+            {
+              id: 41,
+              name: 'Module Mk.1',
+              type: 'module',
+            },
+            {
+              id: 42,
+              name: 'Module Mk.2',
+              type: 'module',
+            },
+            {
+              id: 51,
+              name: 'Shield Mk.1',
+              type: 'shield',
+            },
+            {
+              id: 52,
+              name: 'Shield Mk.2',
+              type: 'shield',
+            },
+            {
+              id: 61,
+              name: 'Weapon Mk.1',
+              type: 'weapon',
+            },
+            {
+              id: 62,
+              name: 'Weapon Mk.2',
+              type: 'weapon',
+            },
+          ];
         }
         return inventory;
       };
