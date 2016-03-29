@@ -8,7 +8,7 @@
               data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
           <div id="{{ type }}_list" class="collapse">
             <ul>
-              <li item-info ng-repeat="item in items" item="item"></li>
+              <li item-info ng-repeat="item in items" item="item" clicker="selectPart(type, part)"></li>
               <li item-none ng-hide="items.length">None available</li>
             </ul>
           </div>
@@ -17,6 +17,20 @@
     </div>
     <div class="col-xs-8">
       <div class="design-proto">
+        <div class="row">
+          <div class="col-xs-12">
+            <strong>{{ proto.name || 'Prototype'}}</strong>
+            ({{ proto.frame.name || 'None'}})
+          </div>
+        </div>
+        <div class="row" ng-repeat="(type, slots) in proto.frame.slots">
+          <div class="col-xs-12">
+            <strong>{{ type | upperFirst }} Slots:</strong> {{ slots }}
+          </div>
+          <div class="col-xs-12" ng-repeat="part in proto[type] track by $index">
+            {{ part.name }}
+          </div>
+        </div>
       </div>
       <div class="design-stats">
       </div>

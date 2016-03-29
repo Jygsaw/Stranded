@@ -2,8 +2,8 @@
   <div class="col-xs-8" data-toggle="collapse" data-target="#{{ item.id }}_{{ item.type}}_details">
     {{ item.name }}
   </div>
-  <div class="col-xs-4">
-    Add
+  <div class="col-xs-4 text-right" ng-click="clicker({type: item.type, part: item});">
+    + &gt;
   </div>
 </div>
 <div id="{{ item.id }}_{{ item.type }}_details" class="item-details collapse">

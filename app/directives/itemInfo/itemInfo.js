@@ -13,6 +13,7 @@
         restrict: 'A',
         scope: {
           item: '=',
+          clicker: '&',
         },
         templateUrl: 'directives/itemInfo/itemInfo.html',
         link: function (scope, elem) {

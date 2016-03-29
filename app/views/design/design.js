@@ -24,8 +24,9 @@
   // declare controller
   app.controller('DesignController', [
     '$scope',
+    '$window',
     'Inventory',
-    function ($scope, Inventory) {
+    function ($scope, $window, Inventory) {
       // initialize variables
       $scope.parts = {
         armors: Inventory.getArmors(),
@@ -36,7 +37,44 @@
         weapons: Inventory.getWeapons(),
       };
 
-      // declare methods
+      $scope.proto = {
+        frame: null,
+      };
+      resetProto();
+
+      // declare private functions
+      function resetProto() {
+        $scope.proto.armor = [];
+        $scope.proto.engine = [];
+        $scope.proto.module = [];
+        $scope.proto.shield = [];
+        $scope.proto.weapon = [];
+      };
+
+      // declare public methods
+      $scope.selectPart = function (type, part) {
+        // set frame
+        if (type === 'frame') {
+          $scope.proto.frame = part;
+          resetProto();
+        } else {
+          // trigger error if no frame selected
+          if ($scope.proto.frame === null) {
+            console.warn('No frame selected');
+            $window.alert('No frame selected');
+            return;
+          }
+
+          // add part to prototype if room available
+          if ($scope.proto[type].length < $scope.proto.frame.slots[type]) {
+            $scope.proto[type].push(part);
+          } else {
+            console.warn('No empty slots');
+            $window.alert('No empty slots');
+            return;
+          }
+        }
+      };
     }
   ]);
 }());
