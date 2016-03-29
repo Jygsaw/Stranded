@@ -3,6 +3,16 @@
   <div class="row row-eq-height">
     <div class="col-xs-4">
       <div class="design-parts">
+        <div ng-repeat="(type, items) in parts">
+          <div class="design-item-list" data-toggle="collapse"
+              data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
+          <div id="{{ type }}_list" class="collapse">
+            <ul>
+              <li item-info ng-repeat="item in items" item="item"></li>
+              <li item-none ng-hide="items.length">None available</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-xs-8">

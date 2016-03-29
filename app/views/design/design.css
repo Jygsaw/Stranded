@@ -4,6 +4,27 @@
   border: 1px solid #666;
   color: #fff;
 }
+.design-parts .design-item-list {
+  background: #666;
+  margin-bottom: 10px;
+}
+.design-parts ul {
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.design-parts li[item-info] {
+  background: #666;
+  border: 1px solid #666;
+  margin-bottom: 5px;
+}
+.design-parts li[item-info] .item-details {
+  background: #ccc;
+  color: #000;
+}
+.design-parts li[item-none] {
+  background: #ccc;
+  color: #000;
+}
 
 .design-proto, .design-stats {
   left: 15px;  /* Bootstrap Gutter */
