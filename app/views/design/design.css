@@ -1,0 +1,25 @@
+.design-parts {
+  height: 100%;
+  overflow: auto;
+  border: 1px solid #666;
+  color: #fff;
+}
+
+.design-proto, .design-stats {
+  left: 15px;  /* Bootstrap Gutter */
+  right: 15px;  /* Bootstrap Gutter */
+}
+
+.design-proto {
+  position: absolute;
+  top: 0;
+  bottom: 8em;
+  border: 1px solid #666;
+}
+
+.design-stats {
+  position: absolute;
+  bottom: 0;
+  height: 7em;
+  border: 1px solid #666;
+}
