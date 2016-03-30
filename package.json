@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Jygsaw/stranded/issues"
   },
-  "homepage": "https://github.com/Jygsaw/stranded#readme"
+  "homepage": "https://github.com/Jygsaw/stranded#readme",
+  "engines": {
+    "node": "5.0.0"
+  }
 }
