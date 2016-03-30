@@ -18,5 +18,8 @@
   "homepage": "https://github.com/Jygsaw/stranded#readme",
   "engines": {
     "node": "5.0.0"
+  },
+  "dependencies": {
+    "express": "^4.13.4"
   }
 }
