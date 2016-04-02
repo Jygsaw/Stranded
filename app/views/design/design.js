@@ -5,7 +5,7 @@
   var app = angular.module('strandedApp.design', [
     'ui.router',
     'strandedApp.filters',
-    'strandedApp.inventoryService',
+    'strandedApp.Inventory',
     'strandedApp.itemInfoDirective',
   ]);
 
@@ -24,16 +24,16 @@
   // declare controller
   app.controller('DesignController', [
     '$scope',
-    'InventoryService',
-    function ($scope, InventoryService) {
+    'Inventory',
+    function ($scope, Inventory) {
       // initialize variables
       $scope.parts = {
-        armors: InventoryService.getArmors(),
-        engines: InventoryService.getEngines(),
-        frames: InventoryService.getFrames(),
-        modules: InventoryService.getModules(),
-        shields: InventoryService.getShields(),
-        weapons: InventoryService.getWeapons(),
+        armors: Inventory.getArmors(),
+        engines: Inventory.getEngines(),
+        frames: Inventory.getFrames(),
+        modules: Inventory.getModules(),
+        shields: Inventory.getShields(),
+        weapons: Inventory.getWeapons(),
       };
 
       // declare methods

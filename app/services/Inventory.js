@@ -2,11 +2,11 @@
   'use strict';
 
   // initialize module
-  var app = angular.module('strandedApp.inventoryService', [
+  var app = angular.module('strandedApp.Inventory', [
   ]);
 
   // declare service
-  app.service('InventoryService', [
+  app.service('Inventory', [
     function () {
       // initialize private variables
       var inventory = null;
