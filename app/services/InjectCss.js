@@ -2,11 +2,11 @@
   'use strict';
 
   // initialize module
-  var app = angular.module('strandedApp.injectCssService', [
+  var app = angular.module('strandedApp.InjectCss', [
   ]);
 
   // declare service
-  app.service('InjectCssService', [
+  app.service('InjectCss', [
     '$q',
     function ($q) {
       this.inject = function (url) {

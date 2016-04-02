@@ -4,7 +4,7 @@
   // initialize module
   var app = angular.module('strandedApp.login', [
     'ui.router',
-    'strandedApp.injectCssService',
+    'strandedApp.InjectCss',
   ]);
 
   // configure state
@@ -17,9 +17,9 @@
         controller: 'LoginController',
         resolve: {
           css: [
-            'InjectCssService',
-            function (InjectCssService) {
-              InjectCssService.inject('views/login/login.css');
+            'InjectCss',
+            function (InjectCss) {
+              InjectCss.inject('views/login/login.css');
             }
           ],
         },

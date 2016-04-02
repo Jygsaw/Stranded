@@ -4,7 +4,7 @@
   // initialize module
   var app = angular.module('strandedApp.splash', [
     'ui.router',
-    'strandedApp.injectCssService',
+    'strandedApp.InjectCss',
   ]);
 
   // configure state
@@ -16,9 +16,9 @@
         templateUrl: 'views/splash/splash.html',
         resolve: {
           css: [
-            'InjectCssService',
-            function (InjectCssService) {
-              InjectCssService.inject('views/splash/splash.css');
+            'InjectCss',
+            function (InjectCss) {
+              InjectCss.inject('views/splash/splash.css');
             }
           ],
         },
