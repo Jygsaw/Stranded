@@ -7,12 +7,16 @@
 
   // declare service
   app.service('InjectCssService', [
-    function () {
+    '$q',
+    function ($q) {
       this.inject = function (url) {
-        var link = document.createElement('link');
-        link.href = url;
-        link.rel = 'stylesheet';
-        angular.element('head').append(link);
+        return $q(function (resolve, reject) {
+          var link = document.createElement('link');
+          link.href = url;
+          link.rel = 'stylesheet';
+          link.onload = resolve;
+          angular.element('head').append(link);
+        });
       };
     }
   ]);
