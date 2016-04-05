@@ -48,11 +48,25 @@
               id: 31,
               name: 'Frame Mk.1',
               type: 'frame',
+              slots: {
+                armor: 1,
+                engine: 1,
+                module: 0,
+                shield: 0,
+                weapon: 2,
+              },
             },
             {
               id: 32,
               name: 'Frame Mk.2',
               type: 'frame',
+              slots: {
+                armor: 1,
+                engine: 1,
+                module: 0,
+                shield: 1,
+                weapon: 1,
+              },
             },
             {
               id: 41,
