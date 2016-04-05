@@ -11,6 +11,7 @@
 .design-parts ul {
   padding-left: 10px;
   margin-bottom: 20px;
+  list-style: none;
 }
 .design-parts li[item-info] {
   background: #666;

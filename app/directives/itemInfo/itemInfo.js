@@ -14,10 +14,11 @@
         scope: {
           item: '=',
         },
+        templateUrl: 'directives/itemInfo/itemInfo.html',
         link: function (scope, elem) {
-          // dynamically choose display directive based on item type
+          // dynamically insert display directive based on item type
           var dynaTag = '<div ' + scope.item.type + '-info item="item"></div>';
-          elem.append($compile(dynaTag)(scope));
+          elem.find('.item-details').append($compile(dynaTag)(scope));
         },
       };
     }
