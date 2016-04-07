@@ -6,6 +6,7 @@
     'ui.router',
     'strandedApp.filters',
     'strandedApp.Inventory',
+    'strandedApp.StatCalc',
     'strandedApp.itemInfoDirective',
   ]);
 
@@ -26,7 +27,8 @@
     '$scope',
     '$window',
     'Inventory',
-    function ($scope, $window, Inventory) {
+    'StatCalc',
+    function ($scope, $window, Inventory, StatCalc) {
       // initialize variables
       $scope.parts = {
         armors: Inventory.getArmors(),
@@ -41,6 +43,11 @@
         frame: null,
       };
       resetProto();
+
+      $scope.stats = {};
+      $scope.$watch('proto', function (newVal, oldVal, scope) {
+        $scope.stats = StatCalc.calcProto($scope.proto);
+      }, true);
 
       // declare private functions
       function resetProto() {
