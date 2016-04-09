@@ -18,6 +18,10 @@
         templateUrl: 'directives/itemInfo/itemInfo.html',
         link: function (scope, elem) {
           // dynamically insert display directive based on item type
+          // note: dynamic insertion and display directives implemented
+          //         as proof of concept
+          // note: display directives have same structure and could be
+          //         collapsed into single itemInfo directive
           var dynaTag = '<div ' + scope.item.type + '-info item="item"></div>';
           elem.find('.item-details').append($compile(dynaTag)(scope));
         },

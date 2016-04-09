@@ -1,1 +1,3 @@
-Damage: 9000+
+<div ng-repeat="key in ['damage', 'rof']">
+  {{ key | upperFirst }}: {{ item[key] }}
+</div>

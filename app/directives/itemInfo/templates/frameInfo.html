@@ -1,1 +1,3 @@
-Hitpoints: 9000+
+<div ng-repeat="key in ['hitpoints', 'speed']">
+  {{ key | upperFirst }}: {{ item[key] }}
+</div>
