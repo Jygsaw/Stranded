@@ -59,7 +59,10 @@
       };
 
       // declare public methods
-      $scope.selectPart = function (type, part) {
+      $scope.selectPart = function (part) {
+        // initialize variables
+        var type = part.type;
+
         // set frame
         if (type === 'frame') {
           $scope.proto.frame = part;
