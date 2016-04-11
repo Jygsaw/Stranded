@@ -28,7 +28,16 @@
             <strong>{{ type | upperFirst }} Slots:</strong> {{ slots }}
           </div>
           <div class="col-xs-12" ng-repeat="part in proto[type] track by $index">
-            {{ part.name }}
+            <div class="row">
+              <div class="col-xs-1">
+                <div ng-click="removePart(part, $index)">
+                  &lt; -
+                </div>
+              </div>
+              <div class="col-xs-11">
+                {{ part.name }}
+              </div>
+            </div>
           </div>
         </div>
       </div>

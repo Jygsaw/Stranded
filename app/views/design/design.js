@@ -85,6 +85,10 @@
           }
         }
       };
+
+      $scope.removePart = function (part, index) {
+        $scope.proto[part.type].splice(index, 1);
+      }
     }
   ]);
 }());
