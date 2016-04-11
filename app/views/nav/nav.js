@@ -36,5 +36,6 @@
 
   // declare controller
   app.controller('NavController', ['$scope', function ($scope) {
+    $scope.now = Date.now();
   }]);
 }());
