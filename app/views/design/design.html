@@ -3,13 +3,24 @@
   <div class="row row-eq-height">
     <div class="col-xs-4">
       <div class="design-parts">
-        <div ng-repeat="(type, items) in parts">
+        <div ng-repeat="type in ['frames']">
           <div class="design-item-list" data-toggle="collapse"
               data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
           <div id="{{ type }}_list" class="collapse">
             <ul>
-              <li item-info ng-repeat="item in items" item="item" clicker="selectPart(part)"></li>
-              <li item-none ng-hide="items.length">None available</li>
+              <li item-info ng-repeat="item in parts[type]" item="item" clicker="selectPart(part)"></li>
+              <li item-none ng-hide="parts[type].length">None available</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+        <div ng-repeat="type in ['armors', 'engines', 'modules', 'shields', 'weapons']">
+          <div class="design-item-list" data-toggle="collapse"
+              data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
+          <div id="{{ type }}_list" class="collapse">
+            <ul>
+              <li item-info ng-repeat="item in parts[type]" item="item" clicker="selectPart(part)"></li>
+              <li item-none ng-hide="parts[type].length">None available</li>
             </ul>
           </div>
         </div>
@@ -29,12 +40,10 @@
           </div>
           <div class="col-xs-12" ng-repeat="part in proto[type] track by $index">
             <div class="row">
-              <div class="col-xs-1">
-                <div ng-click="removePart(part, $index)">
-                  &lt; -
-                </div>
-              </div>
-              <div class="col-xs-11">
+              <div class="col-xs-1 vcenter">
+                <span class="glyphicon glyphicon-minus-sign" ng-click="removePart(part, $index)"></span>
+              </div><!--
+              --><div class="col-xs-11 vcenter">
                 {{ part.name }}
               </div>
             </div>

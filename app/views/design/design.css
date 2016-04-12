@@ -10,7 +10,7 @@
 }
 .design-parts ul {
   padding-left: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   list-style: none;
 }
 .design-parts li[item-info] {
@@ -25,6 +25,11 @@
 .design-parts li[item-none] {
   background: #ccc;
   color: #000;
+}
+.design-parts hr {
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: 2px solid #ccc;
 }
 
 .design-proto, .design-stats {
