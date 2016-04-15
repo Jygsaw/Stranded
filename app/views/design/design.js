@@ -5,6 +5,7 @@
   var app = angular.module('strandedApp.design', [
     'ui.router',
     'strandedApp.filters',
+    'strandedApp.InjectCss',
     'strandedApp.Inventory',
     'strandedApp.StatCalc',
     'strandedApp.itemInfoDirective',
@@ -18,6 +19,14 @@
         url: '^/design',
         templateUrl: 'views/design/design.html',
         controller: 'DesignController',
+        resolve: {
+          css: [
+            'InjectCss',
+            function (InjectCss) {
+              InjectCss.inject('views/design/design.css');
+            }
+          ],
+        },
       });
     }
   ]);
