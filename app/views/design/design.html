@@ -36,7 +36,7 @@
         </div>
         <div class="row" ng-repeat="(type, slots) in proto.frame.slots">
           <div class="col-xs-12">
-            <strong>{{ type | upperFirst }} Slots:</strong> {{ slots }}
+            <strong>{{ type | upperFirst }} Slots:</strong> {{ slots - proto[type].length }}
           </div>
           <div class="col-xs-12" ng-repeat="part in proto[type] track by $index">
             <div class="row">

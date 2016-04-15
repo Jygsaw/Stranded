@@ -79,8 +79,8 @@
           if ($scope.proto[type].length < $scope.proto.frame.slots[type]) {
             $scope.proto[type].push(part);
           } else {
-            console.warn('No empty slots');
-            $window.alert('No empty slots');
+            console.warn('No available slots');
+            $window.alert('No available slots');
             return;
           }
         }
