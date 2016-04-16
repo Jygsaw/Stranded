@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <div id="tech-trees-carousel" class="tech-trees carousel slide" data-interval="false">
+        <div class="carousel-inner">
+          <div class="tech-tree item" ng-repeat="(key, graph) in techTrees track by $index" ng-class="{ active: !$index }">
+
+            <div class="tree-graph">
+              {{ graph.root.name }} => {{ graph.root.id }}
+              <!-- <div item-info item="tree.root.info" clicker="selectItem(item)"></div> -->
+            </div>
+
+            <div class="carousel-caption">
+              <strong>{{ key | upperFirst }}:</strong> {{ graph.points }} points
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control left" role="button" data-target="#tech-trees-carousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left glyphicon-menu-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control right" role="button" data-target="#tech-trees-carousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right glyphicon-menu-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="tech-trees-ctrls">
+        <div class="row">
+          <div class="col-xs-6 vcenter">
+            <strong>Tech Points:</strong> {{ 'num' }}
+          </div><!--
+          --><div class="col-xs-6 vcenter text-right">
+            <button id="tech-trees-reset-ctrl" ng-click="resetAll()">Reset Points</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

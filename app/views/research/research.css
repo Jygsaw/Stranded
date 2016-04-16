@@ -1,0 +1,28 @@
+.tech-trees {
+background: #bad;
+  height: 100%;
+  padding-bottom: 50px;
+  text-align: center;
+}
+.tech-tree {
+background: #cdc;
+  display: inline-block;
+  height: 100%;
+}
+.tech-trees-ctrls {
+background: #ace;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-left: 15px;
+  margin-right: 15px;
+  border: 1px solid #666;
+}
+
+/***** Bootstrap Override: begin *****/
+.tech-trees .carousel-control {
+  background-image: none;
+  bottom: 50px;
+}
+/***** Bootstrap Override: end *****/

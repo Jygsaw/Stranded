@@ -11,6 +11,7 @@
     'strandedApp.account',
     'strandedApp.settings',
     'strandedApp.design',
+    'strandedApp.research',
   ]);
 
   // configure default route
