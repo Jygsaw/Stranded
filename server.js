@@ -7,6 +7,7 @@ app.set('port', (process.env.PORT || 5000));
 
 // declare static assets
 app.use(express.static(__dirname + '/app'));
+app.use(express.static(__dirname + '/node_modules'));
 
 // declare routes
 app.get('/', function(request, response) {
