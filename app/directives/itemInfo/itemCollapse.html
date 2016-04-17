@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-xs-8 vcenter" data-toggle="collapse" data-target="#{{ item.id }}_{{ item.type}}_details">
+    {{ item.name }}
+  </div><!--
+  --><div class="col-xs-4 vcenter text-right">
+    <span class="glyphicon glyphicon-plus-sign" ng-click="clicker({ item: item });"></span>
+  </div>
+</div>
+<div id="{{ item.id }}_{{ item.type }}_details" class="item-details collapse">
+</div>
