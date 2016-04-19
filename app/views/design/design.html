@@ -7,7 +7,7 @@
               data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
           <div id="{{ type }}_list" class="collapse">
             <ul>
-              <li item-info ng-repeat="item in parts[type]" item="item" clicker="selectPart(part)"></li>
+              <li item-collapse class="item-info" ng-repeat="item in parts[type]" item="item" clicker="selectPart(item)"></li>
               <li item-none ng-hide="parts[type].length">None available</li>
             </ul>
           </div>
@@ -18,7 +18,7 @@
               data-target="#{{ type }}_list">{{ type | upperFirst }}</div>
           <div id="{{ type }}_list" class="collapse">
             <ul>
-              <li item-info ng-repeat="item in parts[type]" item="item" clicker="selectPart(part)"></li>
+              <li item-collapse class="item-info" ng-repeat="item in parts[type]" item="item" clicker="selectPart(item)"></li>
               <li item-none ng-hide="parts[type].length">None available</li>
             </ul>
           </div>

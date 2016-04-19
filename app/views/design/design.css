@@ -13,16 +13,12 @@
   margin-bottom: 10px;
   list-style: none;
 }
-.design-parts li[item-info] {
+.design-parts .item-info {
   background: #666;
   border: 1px solid #666;
   margin-bottom: 5px;
 }
-.design-parts li[item-info] .item-details {
-  background: #ccc;
-  color: #000;
-}
-.design-parts li[item-none] {
+.design-parts .item-info .item-details {
   background: #ccc;
   color: #000;
 }
